@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+h1 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+section.section {
+    padding: 0px;
+}
+.container {
+    padding: 20px;
+}
+body {
+    align-items: center;
+}
+#Standings{
+    display:block;
+    align-items: center;
+    justify-content: space-around;
+}
+#Atlantic {
+    background-color: royalblue;
+    color: white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#Central {
+    background-color: sandybrown;
+    color: white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#Southeast {
+    background-color: gold;
+    color: white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#Northwest {
+    background-color: teal;
+    color: white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#Pacific {
+    background-color: turquoise;
+    color: white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#Southwest {
+    background-color: sienna;
+    color:white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#East {
+    background-color: #004E7C;
+    color:white;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#West {
+    background-color: #FFDF6C;
+    color:#004E7C;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#League {
+    background-color: whitesmoke;
+    color: royalblue;
+    border-radius: 25px;
+    min-width: 100%;
+    table-layout: auto;
+}
+#leagueTableSpace {
+    display: block;
+    min-width: 100%;
+}
+#confTableSpace {
+    display: block;
+    min-width: 100%;
+}
+#divisionTableSpace {
+    display: block;
+    min-width: 100%;
+}
+#westTableSpace {
+    display: block;
+    min-width: 100%;
+}
+#eastTableSpace {
+    display: block;
+}
+
+tr {
+    font-weight: bold;
+}
+
+#EastTitle {
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+#WestTitle {
+    text-align: center;
+    color: #004E7C;
+    margin: auto;
+}
+#DiviTitle {
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+#LeagueTitle {
+    text-align: center;
+    color: royalblue;
+    margin: auto;
+}
+#StandingLabelsE{
+    color: white;
+}
+#StandingLabelsW{
+    color: #004E7C;
+}
+#StandingLabelsL{
+    color: royalblue;
+}
+td {
+    border: none;
+}
+tr {
+    white-space: nowrap;
+}
+#standingsCard {
+    width: 85%;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+#scheduleCard {
+    width: 85%;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#gameCard {
+    padding: 10px;
+    margin: 20px;
+    text-align: left;
+    min-width: 200px;
+}
+hr {
+    margin: 0;
+}
+#gameCard > p {
+    margin: 1px;
+    font-weight: bolder;
+}
+#gameCard > span {
+    text-align: right;
+    padding-right: 3px;
+}
+#TeamPost{
+    width: 85%;
+    padding: 20px;
+    margin:auto;
+    display: block;
+    height: 175px;
+}
+#imageSpace {
+    float:left;
+    width:fit-content;
+    padding: 20px;
+}

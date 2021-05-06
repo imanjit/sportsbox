@@ -1,0 +1,26 @@
+{
+  "name": "sportsbox",
+  "version": "1.0.0",
+  "description": "Basketball FanPage",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imanjit/sportsbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imanjit/sportsbox/issues"
+  },
+  "homepage": "https://github.com/imanjit/sportsbox#readme",
+  "dependencies": {
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
