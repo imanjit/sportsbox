@@ -1,3 +1,5 @@
+
+
 const standingsBtnLeag = document.querySelector("#standingsLeag")
 const standingsBtnConf = document.querySelector("#standingsConf")
 const standingsBtnDivi = document.querySelector("#standingsDivi")

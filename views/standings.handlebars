@@ -1,0 +1,408 @@
+   <section>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <h1 class="navbar-item">SportsBox Sports</h1>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/" class="navbar-item">
+            Home
+          </a>
+    
+          <a  href="/standings" class="navbar-item">
+            Standings
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                News
+              </a>
+              <a class="navbar-item">
+                Teams
+              </a>
+              <a href="/players" class="navbar-item">
+               Players
+              </a>
+              <a class="navbar-item">
+                Highlights
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+   </section> 
+  <div id="standingsCard" class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Standings
+      </p>
+      <button id="standingsLeag" onclick="this.blur()" class="card-footer-item">League</button>
+      <button id="standingsConf" onclick="this.blur()" class="card-footer-item">Conference</button>
+      <button id="standingsDivi" onclick="this.blur()" class="card-footer-item">Division</button>
+      <button id="clear" onclick="this.blur()" class="card-footer-item">Clear</button>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <div id="Standings" class="columns is-centered">    
+          <div id="leagueTableSpace" class="column table-container is-full">
+            <table id="League" class="table mr-0">
+            <thead>
+              <tr><th colspan="11" id="LeagueTitle">League</th></tr>
+              <tr id="StandingLabelsL">
+                <th title="Position">Pos</th>
+                <th>Team</th>
+                <th title="Won">W</th>
+                <th title="Loses">L</th>
+                <th title="WinPercentage">Pct </th>
+                <th title="Played">GB</th>
+                <th title="ConfRecord">Conf  </th>
+                <th title="HomeRecord">Home  </th>
+                <th title="AwayRecord">Away  </th>
+                <th title="Last10Games">L10  </th>
+                <th title="WinorLoseStreak">Str</th>
+              </tr>
+            </thead>
+           
+            <tfoot>
+              <tr id="StandingLabelsL">
+                <th title="Position">Pos</th>
+                <th>Team</th>
+                <th title="Won">W</th>
+                <th title="Loses">L</th>
+                <th title="WinPercentage">Pct </th>
+                <th title="Played">GB</th>
+                <th title="ConfRecord">Conf  </th>
+                <th title="HomeRecord">Home  </th>
+                <th title="AwayRecord">Away  </th>
+                <th title="Last10Games">L10  </th>
+                <th title="WinorLoseStreak">Str</th>
+              </tr>
+            </tfoot>
+            </table>
+          </div>
+          <div id="westTableSpace" class="column table-container is-full">
+              <table id="West" class="table mr-0">
+                <thead>
+                  <tr><th colspan="11" id="WestTitle">West</th></tr>
+                  <tr id="StandingLabelsW">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W</th>
+                  <th title="Loses">L</th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB</th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </thead>
+           
+                <tfoot>
+                  <tr id="StandingLabelsW">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W</th>
+                    <th title="Loses">L</th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB</th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </tfoot>
+              </table>
+          </div>
+          <div id="eastTableSpace" class="column table-container is-full">
+              <table id="East" class="table mr-0">
+              <thead>
+                <tr><th colspan="11" id="EastTitle">East</th></tr>
+                <tr id="StandingLabelsE">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W </th>
+                  <th title="Loses">L </th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB </th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                </tr>
+              </thead>
+             
+              <tfoot>
+                <tr id="StandingLabelsE">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W</th>
+                  <th title="Loses">L</th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB</th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                </tr>
+              </tfoot>
+              </table>
+          </div>
+          <div id="divisionTableSpace" class="column table-container is-full">
+            <table id="Atlantic" class="table mr-0">
+            <thead>
+              <tr><th colspan="11" id="DiviTitle">Atlantic</th></tr>
+              <tr id="StandingLabelsE">
+                <th title="Position">Pos</th>
+                <th>Team</th>
+                <th title="Won">W </th>
+                <th title="Loses">L </th>
+                <th title="WinPercentage">Pct </th>
+                <th title="Played">GB </th>
+                <th title="ConfRecord">Conf  </th>
+                <th title="HomeRecord">Home  </th>
+                <th title="AwayRecord">Away  </th>
+                <th title="Last10Games">L10  </th>
+                <th title="WinorLoseStreak">Str</th>
+              </tr>
+            </thead>
+           
+            <tfoot>
+              <tr id="StandingLabelsE">
+                <th title="Position">Pos</th>
+                <th>Team</th>
+                <th title="Won">W</th>
+                <th title="Loses">L</th>
+                <th title="WinPercentage">Pct </th>
+                <th title="Played">GB</th>
+                <th title="ConfRecord">Conf  </th>
+                <th title="HomeRecord">Home  </th>
+                <th title="AwayRecord">Away  </th>
+                <th title="Last10Games">L10  </th>
+                <th title="WinorLoseStreak">Str</th>
+              </tr>
+            </tfoot>
+            </table>
+            <table id="Central" class="table mr-0">
+              <thead>
+                <tr><th colspan="11" id="DiviTitle">Central</th></tr>
+                <tr id="StandingLabelsE">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W </th>
+                  <th title="Loses">L </th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB </th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                </tr>
+              </thead>
+             
+              <tfoot>
+                <tr id="StandingLabelsE">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W</th>
+                  <th title="Loses">L</th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB</th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                </tr>
+              </tfoot>
+              </table>
+            <table id="Southeast" class="table mr-0">
+                <thead>
+                  <tr><th colspan="11" id="DiviTitle">Southeast</th></tr>
+                  <tr id="StandingLabelsE">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W </th>
+                    <th title="Loses">L </th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB </th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </thead>
+               
+                <tfoot>
+                  <tr id="StandingLabelsE">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W</th>
+                    <th title="Loses">L</th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB</th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </tfoot>
+              </table>
+            <table id="Northwest" class="table mr-0">
+                <thead>
+                  <tr><th colspan="11" id="DiviTitle">Northwest</th></tr>
+                  <tr id="StandingLabelsW">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W </th>
+                    <th title="Loses">L </th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB </th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </thead>
+               
+                <tfoot>
+                  <tr id="StandingLabelsW">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W</th>
+                    <th title="Loses">L</th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB</th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </tfoot>
+              </table>
+            <table id="Pacific" class="table mr-0">
+                <thead>
+                  <tr><th colspan="11" id="DiviTitle">Pacific</th></tr>
+                  <tr id="StandingLabelsW">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W </th>
+                    <th title="Loses">L </th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB </th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </thead>
+               
+                <tfoot>
+                  <tr id="StandingLabelsW">
+                    <th title="Position">Pos</th>
+                    <th>Team</th>
+                    <th title="Won">W</th>
+                    <th title="Loses">L</th>
+                    <th title="WinPercentage">Pct </th>
+                    <th title="Played">GB</th>
+                    <th title="ConfRecord">Conf  </th>
+                    <th title="HomeRecord">Home  </th>
+                    <th title="AwayRecord">Away  </th>
+                    <th title="Last10Games">L10  </th>
+                    <th title="WinorLoseStreak">Str</th>
+                  </tr>
+                </tfoot>
+            </table>
+            <table id="Southwest" class="table mr-0">
+              <thead>
+                <tr><th colspan="11" id="DiviTitle">Southwest</th></tr>
+                <tr id="StandingLabelsW">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W </th>
+                  <th title="Loses">L </th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB </th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                </tr>
+              </thead>
+             
+              <tfoot>
+                <tr id="StandingLabelsW">
+                  <th title="Position">Pos</th>
+                  <th>Team</th>
+                  <th title="Won">W</th>
+                  <th title="Loses">L</th>
+                  <th title="WinPercentage">Pct </th>
+                  <th title="Played">GB</th>
+                  <th title="ConfRecord">Conf  </th>
+                  <th title="HomeRecord">Home  </th>
+                  <th title="AwayRecord">Away  </th>
+                  <th title="Last10Games">L10  </th>
+                  <th title="WinorLoseStreak">Str</th>
+                </tr>
+              </tfoot>
+            </table>
+
+        </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div id="scheduleCard" class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        Schedule
+      </p>
+        <input type="date" id="date" class="card-footer-item">
+        <button id="enterDate" class="card-footer-item">Enter</button>
+        <button id="clearGames" onclick="this.blur()" class="card-footer-item">Clear</button>
+      </header>
+    </header>
+    <div class="card-content" id="gamesGoHere">
+    </div>
+    <br>
+  </div>
+  <div id="TeamPost" class="box">
+    <div id="imageSpace">
+    <figure class="image is-128x128">
+      <img class="is-rounded" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3989.png">
+    </figure>
+  </div>
+  <h1>Blake Griffin</h1>
+    <p id="TeamPostP">
+      Blake Griffin sign with the Brooklyn Nets joining their powerhouse squad after agreeing to a buyout with the Detroit Pistons.
+    </p>
+  </div>
+
+  <script src="../public/js/standings.js"
