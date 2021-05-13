@@ -19,7 +19,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+<<<<<<< HEAD
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log(`SportsBox is live on ${PORT}`));
+});
+=======
 sequelize.sync({force:false}).then(()=> {
     app.listen(PORT, () => 
       console.log(`App listening on port ${PORT}!`));
     });
+>>>>>>> 95f1d512e2dd0153c730b07657473ccd879cf1b4
