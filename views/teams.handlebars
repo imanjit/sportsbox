@@ -1,0 +1,146 @@
+<body style="background-image: linear-gradient(180deg, #{{team.primaryColor}}, #{{team.secondaryColor}});">
+  <section>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <h1 class="navbar-item">SportsBox Sports</h1>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="/" class="navbar-item">
+            Home
+          </a>
+    
+          <a  href="/standings" class="navbar-item">
+            Standings
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                News
+              </a>
+              <a class="navbar-item">
+                Teams
+              </a>
+              <a href="/players" class="navbar-item">
+               Players
+              </a>
+              <a class="navbar-item">
+                Highlights
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+   </section> 
+
+
+ <div class="tile is-ancestor">
+  <div class="tile is-parent">
+    
+  </div>
+</div>
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child box" style="text-align: center;">
+          <p class="title">{{team.wins}} - {{team.losses}}</p>
+          <p class="subtitle">Record</p> 
+        </article>
+        <article class="tile is-child box" style="text-align: center;">
+          <p class="title">{{team.divisionWins}} - {{team.divisionLosses}}</p>
+          <p class="subtitle">Division Record</p>        
+        </article>
+        <article class="tile is-child box" style="text-align: center;">
+          <p class="title">{{team.homeWins}} - {{team.homeLosses}}</p>
+          <p class="subtitle">Home</p> 
+        </article>
+      </div>
+      <div class="tile is-parent is-vertical" style="text-align: center;">
+        <article class="tile is-child box" style="text-align: center;">
+          <p class="title">{{team.confWins}} - {{team.confLosses}}</p>
+          <p class="subtitle">Conf. Record</p> 
+        </article>
+        <article class="tile is-child box" style="text-align: center;">
+          <p class="title">{{team.lastTenWins}} - {{team.lastTenLosses}}</p>
+          <p class="subtitle">Last Ten</p> 
+        </article>
+        <article class="tile is-child box" style="text-align: center;">
+          <p class="title">{{team.awayWins}} - {{team.awayLosses}}</p>
+          <p class="subtitle">Away</p> 
+        </article>
+      </div>
+      <div class="tile is-parent" style="text-align: center; width: 150%;">
+        <article class="tile is-child box">
+          <p class="title">{{team.city}} {{team.teamName}}</p>
+          <figure class="image is-4by3">
+            <img src="{{team.logoURL}}">
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">Player Bio</p>
+        <p class="subtitle">Aligned with the right column</p>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <div class="content">
+        <p class="title">Roster</p>
+        <div class="content">
+        <div class="column table-container is-full">
+    <table id="roster" class="table mr-0">
+        <thead>
+            <tr>
+                <th title="#">#</th>
+                <th title="name">Name</th>
+                <th title="pos">Pos</th>
+            </tr>
+        </thead>
+        <tbody id="playerList">
+                
+        </tbody>
+        <tfoot>
+            <tr>
+                <th title="#">#</th>
+                <th title="name">Name</th>
+                <th title="pos">Pos</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+      </div>
+    </article>
+  </div>
+</div>
+
+</div> 
+  <script>
+    const setTeam = () => { localStorage.setItem("team", ("{{team.abreviatedName}}")); };
+    setTeam();
+  </script>
+  <script src="/js/apiKey.js"></script>
+  <script src="/js/teams.js"></script>
+</body>

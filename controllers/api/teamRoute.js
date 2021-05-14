@@ -1,7 +1,23 @@
 const { Team } = require('../../models');
 const router = require('express').Router();
 
-router.get('/:TEAMID', async (req, res) => {
+router.get('/teams/:TEAMID', async (req, res) => {
+  try {
+    const teamData = await Team.findByPk(req.params.TEAMID);
+    
+    if (!teamData) {
+      res.status(404).json({ message: 'No team found with this id!' });
+      return;
+    };
+
+    const team = teamData.get({ plain: true });
+    res.status(200).render('teams', { team });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/api/teams/:TEAMID', async (req, res) => {
     try {
       const teamData = await Team.findByPk(req.params.TEAMID);
   
@@ -15,7 +31,7 @@ router.get('/:TEAMID', async (req, res) => {
       res.status(500).json(err);
     }
 });
-router.get('/', async (req, res) => {
+router.get('/api/teams', async (req, res) => {
     try {
       const teamData = await Team.findAll();
   
@@ -29,7 +45,7 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     }
 });
-router.delete('/:TEAMID', async (req, res) => {
+router.delete('/api/teams/:TEAMID', async (req, res) => {
     try {
       const teamData = await Team.destroy({
         where: {
