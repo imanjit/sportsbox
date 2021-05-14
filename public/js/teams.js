@@ -3,7 +3,7 @@ console.log(team);
 
 const callRoster = async function (team) {
 
-    let results = await fetch(`https://fly.sportsdata.io/v3/nba/stats/json/Players/${team}?key= `);
+    let results = await fetch(`https://fly.sportsdata.io/v3/nba/stats/json/Players/${team}?key=9a108b6dad1848478e8b7308446476ea`);
     let roster = await results.json();
     console.log(roster);
     let rosterSpace = document.getElementById('playerList');

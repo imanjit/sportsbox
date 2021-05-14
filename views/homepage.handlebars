@@ -53,15 +53,20 @@
                 <strong>Sign up</strong>
               </a>
               {{!-- needs to be a route --}}
-              <a href="/login" class="button is-light">
-              Login
+              {{#if loggedIn}}
+              <a id='logButton' class="button is-danger">
+              Log Out
               </a>
+                {{else}}
+              <a class="button is-light" href="/login">
+              Log In
+              </a>
+              {{/if}}
             </div>
           </div>
         </div>
       </div>
     </nav>
-         {{#if loggedIn}}
     <section class="slide block">
       <div class="container is-clipped">
         <div id="slider">
@@ -626,6 +631,3 @@
     </div>
   <section class="section">
   </section>
-  {{else}}
-  <a href='./login'></a>
-  {{/if}}

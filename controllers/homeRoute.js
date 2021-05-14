@@ -3,19 +3,17 @@ const { User } = require('../models');
 
 
 router.get('/', async (req, res) => {
- 
-res.render('homepage', {
-    loggedIn:req.session.loggedIn
+    res.render('homepage', {
+    loggedIn: req.session.loggedIn
 });
 });
 
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
+    if (req.session.loggedIn === true) {
       res.redirect('/');
       return;
     }
-  
     res.render('login');
   });
   
