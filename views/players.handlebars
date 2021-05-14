@@ -53,7 +53,7 @@
     
   </div>
 </div>
-
+{{#if loggedIn}}
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
@@ -100,5 +100,8 @@
       </div>
     </article>
   </div>
+  {{else}}
+  <a href='/login'>Please sign in to view sportsbox</a>
+  {{/if}}
 </div>
 

@@ -11,10 +11,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,15 +26,7 @@ User.init(
       validate: {
         len: [6],
       },
-    },
-    favoriteTeams: {
-        type: DataTypes.ARRAY,
-        values: [],
-        references: {
-            model: 'team',
-            key: 'TEAMID',
-        },
-    },
+    }
   },
   {
     sequelize,

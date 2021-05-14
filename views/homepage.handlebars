@@ -45,7 +45,7 @@
             </div>
           </div>
         </div>
-    
+   
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
@@ -61,6 +61,7 @@
         </div>
       </div>
     </nav>
+         {{#if loggedIn}}
     <section class="slide block">
       <div class="container is-clipped">
         <div id="slider">
@@ -625,3 +626,6 @@
     </div>
   <section class="section">
   </section>
+  {{else}}
+  <a href='./login'></a>
+  {{/if}}

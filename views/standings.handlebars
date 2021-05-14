@@ -46,6 +46,8 @@
           </div>
         </div>
    </section> 
+
+   {{#if loggedIn}}
   <div id="standingsCard" class="card">
     <header class="card-header">
       <p class="card-header-title">
@@ -404,5 +406,7 @@
       Blake Griffin sign with the Brooklyn Nets joining their powerhouse squad after agreeing to a buyout with the Detroit Pistons.
     </p>
   </div>
-
+  {{else}}
+  <a href='./login'>Please sign in to view sportsbox</a>
+{{/if}}
   <script src="../public/js/standings.js"
