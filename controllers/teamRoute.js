@@ -1,4 +1,4 @@
-const { Team } = require('../../models');
+const { Team } = require('../models');
 const router = require('express').Router();
 
 router.get('/teams/:TEAMID', async (req, res) => {

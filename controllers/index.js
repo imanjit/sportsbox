@@ -1,14 +1,15 @@
 const router = require('express').Router();
 const home = require("./homeRoute");
-const teamRoute = require('./api/teamRoute');
-const players = require("./playersRoute");
-const standings =require("./standings.Route");
-const login = require("./loginRoute");
+const teamRoute = require('./teamRoute');
+const playerRoute = require('./playersRoute');
+const standings = require('./standings.Route');
 
-router.use('/', teamRoute);
+
+
+router.use('/api/teams', teamRoute);
+router.use('/api/players', playerRoute);
 router.use('/', home);
-router.use('/', players);
+router.use('/', playerRoute);
 router.use('/', standings);
-router.use('/', login);
 
 module.exports = router;
