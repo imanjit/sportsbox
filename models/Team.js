@@ -117,6 +117,10 @@ Team.init(
     stadium: {
         type: DataTypes.STRING,
         allowNull: true,
+    },
+    logoURL: {
+        type: DataTypes.STRING,
+        allowNull: true,
     }
   },
   {
