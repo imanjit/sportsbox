@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcryptjs');
 
 class User extends Model {}
 
@@ -36,5 +37,18 @@ User.init(
     modelName: 'user',
   }
 );
+
+User.prototype.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
+User.addHook(`beforeSave`, user => {
+  const rounds = 10;
+  user.password = bcrypt.hashSync(
+    user.password,
+    bcrypt.genSaltSync(rounds),
+    null
+  );
+});
 
 module.exports = User;
