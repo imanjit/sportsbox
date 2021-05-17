@@ -3,15 +3,6 @@
   "version": "1.0.0",
   "description": "Basketball FanPage",
   "main": "server.js",
-  "production": {
-    "username": "root",
-    "password": "Jordan13$",
-    "database": "sportsbox_db",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false,
-    "use_env_variable": "DATABASE_URL"
-  },
   "scripts": {
     "seed": "node ./seeds/seed",
     "start": "node server.js"
