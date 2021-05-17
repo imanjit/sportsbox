@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Basketball FanPage",
   "main": "server.js",
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "host": "https://shrouded-hollows-93454.herokuapp.com/"
+  },
   "scripts": {
     "seed": "node ./seeds/seed",
     "start": "node server.js"
