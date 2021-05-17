@@ -1,4 +1,5 @@
-const User = require('./User');
 const Team = require('./Team');
-  
-module.exports = { User, Team };
+const User = require('./User');
+
+
+module.exports = { Team, User };

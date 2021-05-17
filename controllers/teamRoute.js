@@ -10,7 +10,6 @@ router.get('/teams/:TEAMID', async (req, res) => {
       res.status(404).json({ message: 'No team found with this id!' });
       return;
     };
-
     const team = teamData.get({ plain: true });
     res.status(200).render('teampage', { team });
   } catch (err) {

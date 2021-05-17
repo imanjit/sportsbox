@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
 class Team extends Model {}
 
 Team.init(
@@ -71,7 +70,7 @@ Team.init(
         allowNull: false,
     },
     gamesBack: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false,
     },
     streak: {
@@ -95,15 +94,15 @@ Team.init(
         allowNull: false,
     },
     winPercent: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false,
     },
     pointPerGame: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false,
     },
     pointsAllowedPerGame: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DOUBLE,
         allowNull: false,
     },
     primaryColor: {
@@ -111,10 +110,6 @@ Team.init(
         allowNull: true,
     },
     secondaryColor: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-    stadium: {
         type: DataTypes.STRING,
         allowNull: true,
     },

@@ -297,14 +297,13 @@ const confStandings = async function (event) {
 const getLeagueStandingsData = async function() {
 	const leagueStandingsData = [];
 	let teamData = await getTeamData();
-	let results = await fetch("https://api-nba-v1.p.rapidapi.com/standings/standard/2020", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "08e5f79f79msh32c8baa272684c6p18097ejsnb7a075f07bd3",
-		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com"
-	}
-	})
 	let json = await results.json();
+	const update = await fetch('/api/users/login',  
+    {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
 		json.api.standings.sort((a, b) => {
 			if (a.winPercentage > b.winPercentage) {
 				return -1;

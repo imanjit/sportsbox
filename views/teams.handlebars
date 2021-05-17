@@ -68,9 +68,7 @@
         {{#each central as |team|}}
             <a href="/teams/{{team.TEAMID}}">
               <article class="tile is-child box" style="height: 300px; width: 260px; background-image: linear-gradient(180deg, #{{team.primaryColor}}, #{{team.secondaryColor}});">
-              <span class="icon" style="float:right">
-                <i class="fas fa-star fa-lg"></i>
-              </span>
+                <i style="float:right" class="fas fa-star fa-lg"></i>
               <p class="title" style="color:gainsboro;">{{team.city}} {{team.teamName}}</p>
               <figure class="image is-4by3">
                 <img src="{{team.logoURL}}">
