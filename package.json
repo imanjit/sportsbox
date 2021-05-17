@@ -4,10 +4,10 @@
   "description": "Basketball FanPage",
   "main": "server.js",
   "production": {
-    "username": "DB_USER",
-    "password": "DB_PASSWORD",
-    "database": "DB_NAME",
-    "host": "localhost",
+    "username": "root",
+    "password": "Jordan13$",
+    "database": "sportsbox_db",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false,
     "use_env_variable": "DATABASE_URL"
