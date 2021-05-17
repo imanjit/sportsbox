@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers/index');
 const passport = require('passport');
 const morgan = require('morgan');
-const seed= require('./seeds/seed');
+const seed = require('./seeds/seed');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
