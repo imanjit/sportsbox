@@ -7,7 +7,6 @@ const bcryptjs = require('bcryptjs');
 
 
 router.post('/', async (req,res) => {
-    console.log('signing up')
     try {
         User.create({
             email: req.body.email,
@@ -21,7 +20,7 @@ router.post('/', async (req,res) => {
                   
                   //res.status(200).json(dbUserData);
                 });
-                res.redirect(statusCode, `/api/users/login`);
+                res.redirect(statusCode, `/api/users/`);
             })
     } catch (err) {
         const unauthenticatedStatusCode = 401;

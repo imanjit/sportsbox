@@ -4,9 +4,11 @@ const { Team } = require('../models');
 const teamSeedData = require('./teamSeed.json');
 
 
-module.exports.seedDatabase = async () => {
+const seedDatabase = async () => {
   await sequelize.sync({ force: false });
 
   const teams = await Team.bulkCreate(teamSeedData);
   process.exit(1);
 };
+
+seedDatabase();

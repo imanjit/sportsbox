@@ -6,7 +6,6 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers/index');
 const passport = require('passport');
 const morgan = require('morgan');
-const seed = require('./seeds/seed');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -42,7 +41,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(routes);
 
-//Seed database if needed. seed.seedDatabase();
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`SportsBox is live on ${PORT}`));
 });

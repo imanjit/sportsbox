@@ -43,6 +43,7 @@ const signupFormHandler = async (event) => {
   }
 };
 
+
 document
   .getElementById('loginButton')
   .addEventListener('click', loginFormHandler);
