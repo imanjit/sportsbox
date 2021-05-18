@@ -178,6 +178,7 @@ hr {
     margin:auto;
     display: block;
     height: 175px;
+    margin-bottom: 15px;
 }
 #imageSpace {
     float:left;
