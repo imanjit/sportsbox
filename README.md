@@ -9,8 +9,8 @@ Basketball Fan's hub for following their favorite teams's schedule, stats, news,
 - [Usage](#usage)
 - [License](#license)
 - [Team](#contributors)
-- [Bugs](#known bugs)
-- [Future Updates](#future installments)
+- [Bugs](#known-bugs)
+- [Future Updates](#future-installments)
 - [Contact](#contact) <br />
 
 ## Installation
